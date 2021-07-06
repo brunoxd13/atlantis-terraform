@@ -1,0 +1,18 @@
+repos:
+  - id: /.*/
+    allow_custom_workflows: true
+    allowed_overrides:
+      - workflow
+    workflow: default
+
+workflows:
+  default:
+    plan:
+      steps:
+      - init
+      - plan
+      - run: echo "I am a custom workflow"
+          
+    apply:
+      steps:
+      - apply 
