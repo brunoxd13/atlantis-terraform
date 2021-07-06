@@ -26,8 +26,8 @@ resource "aws_s3_bucket" "bucket_site" {
 }
 
 resource "aws_sqs_queue" "terraform_queue" {
-  name                      = "bruno-atlantis-example-queue"
-  delay_seconds             = 90
+  name                      = "devparana-atlantis-example-queue"
+  delay_seconds             = 40
   max_message_size          = 2048
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
