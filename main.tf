@@ -23,3 +23,7 @@ resource "aws_s3_bucket" "bucket_site" {
     bucket = "bruno-atlantis"
     acl    = "private"
 }
+
+resource "aws_sqs_queue" "queue" {
+  name = "queue-cost"
+}
