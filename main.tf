@@ -27,3 +27,23 @@ resource "aws_s3_bucket" "bucket_site" {
 resource "aws_sqs_queue" "queue" {
   name = "queue-cost"
 }
+
+module "ec2_cluster" {
+  source                 = "terraform-aws-modules/ec2-instance/aws"
+  version                = "~> 2.0"
+
+  name                   = "my-cluster"
+  instance_count         = 5
+
+  ami                    = "ami-ebd02392"
+  instance_type          = "m5.large"
+  key_name               = "user1"
+  monitoring             = true
+  vpc_security_group_ids = ["sg-db9919bd"]
+  subnet_id              = "subnet-f1990594"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
