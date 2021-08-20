@@ -23,3 +23,15 @@ resource "aws_s3_bucket" "bucket_site" {
     bucket = "bruno-atlantis-teste"
     acl    = "private"
 }
+
+resource "null_resource" "cluster" {
+  provisioner "local-exec" {
+    command = "echo $FOO $BAR $BAZ >> env_vars.txt"
+
+    environment = {
+      FOO = "bar"
+      BAR = 1
+      BAZ = "true"
+    }
+  }
+}
