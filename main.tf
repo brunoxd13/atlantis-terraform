@@ -20,6 +20,6 @@ terraform {
 }
 
 resource "aws_s3_bucket" "bucket_site" {
-    bucket = "bruno-atlantis"
+    bucket = "bruno-atlantis-teste"
     acl    = "private"
 }
