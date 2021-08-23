@@ -23,3 +23,9 @@ resource "aws_s3_bucket" "bucket_site" {
     bucket = "bruno-atlantis"
     acl    = "private"
 }
+
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo 'Hello World'"
+  }
+}
