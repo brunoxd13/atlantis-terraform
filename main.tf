@@ -25,6 +25,6 @@ resource "aws_s3_bucket" "bucket_site" {
 }
 
 resource "aws_s3_bucket" "bucket_tdc" {
-    bucket = "treilha-devops-tdc-atlantis"
+    bucket = "trilha-devops-tdc-atlantis"
     acl    = "private"
 }
