@@ -23,3 +23,8 @@ resource "aws_s3_bucket" "bucket_site" {
     bucket = "bruno-atlantis"
     acl    = "private"
 }
+
+resource "aws_s3_bucket" "bucket_tdc" {
+    bucket = "treilha-devops-tdc-atlantis"
+    acl    = "private"
+}
