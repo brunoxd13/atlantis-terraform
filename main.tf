@@ -19,12 +19,7 @@ terraform {
   }
 }
 
-resource "aws_s3_bucket" "bucket_site" {
-    bucket = "bruno-atlantis"
-    acl    = "private"
-}
-
 resource "aws_s3_bucket" "bucket_tdc" {
-    bucket = "trilha-devops-tdc-atlantis"
+    bucket = "bucket-s3-live-darede"
     acl    = "private"
 }
