@@ -20,6 +20,6 @@ terraform {
 }
 
 resource "aws_s3_bucket" "bucket_tdc" {
-    bucket = "bucket-do-bruno"
-    acl    = "private"
+  bucket = "bucket-s3-aws-tdc"
+  acl    = "private"
 }
